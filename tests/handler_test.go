@@ -1,11 +1,12 @@
 package tests
 
 import (
-	"SET_YOUR_PROJECT_NAME/internal/server"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"net/http/httptest"
+	"personal_backend/internal/server"
 	"testing"
+
+	"github.com/gin-gonic/gin"
 )
 
 func TestHelloWorldHandler(t *testing.T) {

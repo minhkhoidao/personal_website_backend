@@ -1,8 +1,8 @@
 package main
 
 import (
-	"SET_YOUR_PROJECT_NAME/internal/server"
 	"fmt"
+	"personal_backend/internal/server"
 )
 
 func main() {

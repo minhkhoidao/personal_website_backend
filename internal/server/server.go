@@ -4,12 +4,11 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"personal_backend/internal/database"
 	"strconv"
 	"time"
 
 	_ "github.com/joho/godotenv/autoload"
-
-	"SET_YOUR_PROJECT_NAME/internal/database"
 )
 
 type Server struct {

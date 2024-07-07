@@ -2,14 +2,18 @@ package server
 
 import (
 	"net/http"
+	"personal_backend/internal/modules/games"
 
 	"github.com/gin-gonic/gin"
 )
 
 func (s *Server) RegisterRoutes() http.Handler {
 	r := gin.Default()
+	gameRepository := games.NewGameRepository(s.db.GetDB())
+	gameServices := games.NewGameService(gameRepository)
+	gameController := games.NewGameController(*gameServices)
 
-	r.GET("/", s.HelloWorldHandler)
+	r.GET("/", gameController.GetAllGames)
 
 	r.GET("/health", s.healthHandler)
 
